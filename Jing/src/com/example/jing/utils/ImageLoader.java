@@ -1,6 +1,7 @@
 package com.example.jing.utils;
 
 import java.lang.ref.SoftReference;
+import java.util.HashMap;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -9,12 +10,10 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.example.jing.MyApplication;
-
 public class ImageLoader {
 	protected static final String TAG = "ImageLoader";
 	// 定义一个软引用（缓存机制）
-	//private HashMap<String, SoftReference<Bitmap>> mImageCaches;
+	private HashMap<String, SoftReference<Bitmap>> mImageCaches;
 	private ImageView mImageView;
 
 	public void setImageView(String imagePath, ImageView mImageView) {
@@ -24,8 +23,8 @@ public class ImageLoader {
 
 	private void getBitmap(final String imagePath) {
 		// 判断缓存中是否存在
-		if (MyApplication.getInstance().mImageCaches.containsKey(imagePath)) {
-			SoftReference<Bitmap> softReference = MyApplication.getInstance().mImageCaches.get(imagePath);
+		if (mImageCaches.containsKey(imagePath)) {
+			SoftReference<Bitmap> softReference = mImageCaches.get(imagePath);
 			Bitmap bitmap = softReference.get();
 			// 如果缓存中存在bitmap，则直接返回，不再开线程获取bitmap
 			if (bitmap != null) {
@@ -35,7 +34,7 @@ public class ImageLoader {
 				}
 				return;
 			} else {
-				MyApplication.getInstance().mImageCaches.remove(imagePath);
+				mImageCaches.remove(imagePath);
 			}
 		}
 		// 判断本地缓存中是否存在bitmap
@@ -63,7 +62,7 @@ public class ImageLoader {
 						.getInputStreamFromUrl(imagePath));
 				if (bitmap != null) {
 					// 将bitmap放入缓存
-					MyApplication.getInstance().mImageCaches.put(imagePath, new SoftReference<Bitmap>(
+					mImageCaches.put(imagePath, new SoftReference<Bitmap>(
 							bitmap));
 					Log.d(TAG, "imagePath:" + imagePath + ",bitmap:" + bitmap);
 					BitmapUtil.saveBitmap(bitmap, imagePath);
