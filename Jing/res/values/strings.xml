@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">呵呵</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="nearby">附近</string>
+    <string name="board">留言板</string>
+    <string name="message">消息</string>
+    <string name="contact">联系人</string>
+    <string name="setting">设置</string>
+
+    <string name="loading">正在努力为你加载...</string>
+    <string name="load_more">查看更多</string>
+    <string name="pull_refresh">下拉刷新</string>
+    <string name="last_refresh">上次更新</string>
+    
+</resources>
