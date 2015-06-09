@@ -25,7 +25,6 @@ public class MyViewPage extends RelativeLayout {
 	private ViewPager mViewPager;
 	private LinearLayout mIndicateLayout;
 	private ArrayList<View> mPageViews;
-	private boolean mDirection = true;
 
 	private OnItemSelectListener mOnItemSelectListener;
 	private OnItemChangeListener mOnItemChangeListener;
@@ -158,21 +157,11 @@ public class MyViewPage extends RelativeLayout {
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
 			Log.i("info", "mCurrentIndex: " + mCurrentIndex);
-			if (mCurrentIndex <= mCount && !mDirection) {
-				mCurrentIndex--;
-				if (mCurrentIndex == 0) {
-					mDirection = true;
-				}else {
-					mDirection = false;
-				}
+			if (mCurrentIndex == mCount) {
+				mCurrentIndex = 0;
 			} else if (mCurrentIndex >= 0
-					&& mCurrentIndex < mCount && mDirection) {
+					&& mCurrentIndex < mCount) {
 				mCurrentIndex++;
-				if (mCurrentIndex == mCount) {
-					mDirection = false;
-				}else {
-					mDirection = true;
-				}
 			}
 			refreshIndicateView();
 			sendEmptyMessageDelayed(mCurrentIndex, 3000);
