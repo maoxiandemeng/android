@@ -8,8 +8,9 @@ import android.widget.TextView;
 
 import com.example.jing.R;
 import com.example.jing.base.BaseActivity;
-import com.example.jing.fragment.MessageFragment;
+import com.example.jing.fragment.AppListFragment;
 import com.example.jing.fragment.SettingFragment;
+import com.example.jing.ui.SlidingActivity;
 import com.example.jing.utils.ToastUtils;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.OnClosedListener;
@@ -23,7 +24,7 @@ public class DrawerView implements OnClickListener {
 	private ImageView rightImage;
 	private TextView message, setting;
 	
-	private MessageFragment mMessageFragment;
+	private AppListFragment mAppListFragment;
 	private SettingFragment mSettingFragment;
 
 	public DrawerView(Activity activity) {
@@ -63,15 +64,15 @@ public class DrawerView implements OnClickListener {
 	}
 
 	private void initView() {
-		mMessageFragment = new MessageFragment();
+		mAppListFragment = new AppListFragment();
 		mSettingFragment = new SettingFragment();
 		
 		rightImage = (ImageView) localSlidingMenu
 				.findViewById(R.id.right_image);
 		rightImage.setOnClickListener(this);
 		
-		message = (TextView) localSlidingMenu.findViewById(R.id.message);
-		setting = (TextView) localSlidingMenu.findViewById(R.id.setting);
+		message = (TextView) localSlidingMenu.findViewById(R.id.menu1);
+		setting = (TextView) localSlidingMenu.findViewById(R.id.menu2);
 		message.setOnClickListener(this);
 		setting.setOnClickListener(this);
 	}
@@ -82,13 +83,15 @@ public class DrawerView implements OnClickListener {
 		case R.id.right_image:
 			ToastUtils.show(activity, "”“±ﬂ");
 			break;
-		case R.id.message:
-			((BaseActivity)activity).switchFragment(mMessageFragment, R.id.tab3);
+		case R.id.menu1:
+			((BaseActivity)activity).switchFragment(mAppListFragment, R.id.menu1);
 			localSlidingMenu.showContent();
+			((SlidingActivity)activity).setSlidingTitle("app");
 			break;
-		case R.id.setting:
-			((BaseActivity)activity).switchFragment(mSettingFragment, R.id.tab5);
+		case R.id.menu2:
+			((BaseActivity)activity).switchFragment(mSettingFragment, R.id.menu2);
 			localSlidingMenu.showContent();
+			((SlidingActivity)activity).setSlidingTitle("…Ë÷√");
 			break;
 		}
 	}

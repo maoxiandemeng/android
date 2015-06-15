@@ -6,4 +6,6 @@
     <item name="tab4" type="id"></item>
     <item name="tab5" type="id"></item>
     <item name="item" type="id"></item>
+    <item name="menu1" type="id"></item>
+    <item name="menu2" type="id"></item>
 </resources>

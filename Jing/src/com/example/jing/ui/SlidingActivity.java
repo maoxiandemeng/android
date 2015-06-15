@@ -10,8 +10,7 @@ import android.widget.Toast;
 
 import com.example.jing.R;
 import com.example.jing.base.BaseActivity;
-import com.example.jing.fragment.MessageFragment;
-import com.example.jing.fragment.SettingFragment;
+import com.example.jing.fragment.AppListFragment;
 import com.example.jing.view.DrawerView;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
@@ -19,7 +18,7 @@ public class SlidingActivity extends BaseActivity implements OnClickListener {
 	private SlidingMenu mSlidingMenu;
 	private ImageView mLeftImage, mRightImage;
 	private TextView mTitle;
-	private MessageFragment mMessageFragment;
+	private AppListFragment mAppListFragment;
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -27,7 +26,7 @@ public class SlidingActivity extends BaseActivity implements OnClickListener {
 		setContentView(R.layout.sliding_main);
 		initViews();
 		initEvents();
-		switchFragment(mMessageFragment, R.id.tab1);
+		switchFragment(mAppListFragment, R.id.menu1);
 	}
 
 	@Override
@@ -36,7 +35,7 @@ public class SlidingActivity extends BaseActivity implements OnClickListener {
 		mRightImage = (ImageView) findViewById(R.id.right_image);
 		mTitle = (TextView) findViewById(R.id.title);
 		
-		mMessageFragment = new MessageFragment();
+		mAppListFragment = new AppListFragment();
 
 		mSlidingMenu = new DrawerView(this).initSlidingMenu();
 	}
@@ -46,7 +45,11 @@ public class SlidingActivity extends BaseActivity implements OnClickListener {
 		mLeftImage.setOnClickListener(this);
 		mRightImage.setOnClickListener(this);
 		
-		mTitle.setText("ÏûÏ¢");
+		mTitle.setText("app");
+	}
+	
+	public void setSlidingTitle(String str){
+		mTitle.setText(str);
 	}
 
 	@Override

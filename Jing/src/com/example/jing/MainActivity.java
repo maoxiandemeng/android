@@ -6,9 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 
 import com.example.jing.base.BaseActivity;
 import com.example.jing.fragment.BoardFragment;
@@ -138,9 +138,11 @@ public class MainActivity extends BaseActivity implements onTabSelectListern {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			Log.i("info", "action_settings");
 			return true;
 		}
 		if (id == R.id.item) {
+			Log.i("info", "item");
 			switchAppTheme(this);
 			reload();
 			return true;
@@ -173,11 +175,9 @@ public class MainActivity extends BaseActivity implements onTabSelectListern {
 		switch (Integer.valueOf(value)) {
 		case 1:
 			mPreference.setThemeMode(2);
-			;
 			break;
 		case 2:
 			mPreference.setThemeMode(1);
-			;
 			break;
 		}
 	}

@@ -72,7 +72,7 @@ public abstract class BaseActivity extends FragmentActivity {
 		}
 	};
 
-	protected void switchFragment(Fragment toFragment, int id) {
+	public void switchFragment(Fragment toFragment, int id) {
 		switchFragment(toFragment, id, null);
 	}
 
@@ -83,7 +83,7 @@ public abstract class BaseActivity extends FragmentActivity {
 	 * @param id
 	 * @param bundle
 	 */
-	protected void switchFragment(Fragment toFragment, int id, Bundle bundle) {
+	public void switchFragment(Fragment toFragment, int id, Bundle bundle) {
 		if (mCurrentFragment == id) {
 			if (bundle != null && !bundle.isEmpty()) {
 				getCurrFragment().getArguments().putAll(bundle);

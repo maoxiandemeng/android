@@ -3,12 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
+    <com.example.jing.view.SelectView
+        android:id="@+id/selectView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" >
+    </com.example.jing.view.SelectView>
+
     <ImageView
         android:id="@+id/image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@drawable/ic_launcher"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:visibility="gone" />
 
     <com.example.jing.view.ChartView
         android:id="@+id/chatView"

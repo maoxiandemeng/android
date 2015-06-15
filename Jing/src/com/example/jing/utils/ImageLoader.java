@@ -15,6 +15,10 @@ public class ImageLoader {
 	// 定义一个软引用（缓存机制）
 	private HashMap<String, SoftReference<Bitmap>> mImageCaches;
 	private ImageView mImageView;
+	
+	public ImageLoader(){
+		mImageCaches = new HashMap<String, SoftReference<Bitmap>>();
+	}
 
 	public void setImageView(String imagePath, ImageView mImageView) {
 		this.mImageView = mImageView;

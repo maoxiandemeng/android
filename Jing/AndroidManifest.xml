@@ -28,6 +28,10 @@
         <activity android:name="com.example.jing.ui.ListActivity" >
         </activity>
         <activity
+            android:name="com.example.jing.ui.SlidingActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
             android:name="com.example.jing.ui.PlayVideoActivity"
             android:configChanges="keyboardHidden|orientation"
             android:exported="true"

@@ -2,8 +2,6 @@ package com.example.jing.base;
 
 import java.util.ArrayList;
 
-import com.example.jing.entity.FileItem;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

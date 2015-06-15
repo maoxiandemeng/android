@@ -15,6 +15,7 @@ import com.example.jing.adapter.BoardAdapter;
 import com.example.jing.base.BaseFragment;
 import com.example.jing.entity.BoardEntity;
 import com.example.jing.ui.ListActivity;
+import com.example.jing.ui.SlidingActivity;
 import com.example.jing.utils.ActivityUtils;
 
 public class BoardFragment extends BaseFragment {
@@ -59,7 +60,8 @@ public class BoardFragment extends BaseFragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				ActivityUtils.jumpActivity(getActivity(), ListActivity.class);
+//				ActivityUtils.jumpActivity(getActivity(), ListActivity.class);
+				ActivityUtils.jumpActivity(getActivity(), SlidingActivity.class);
 			}
 		});
 
