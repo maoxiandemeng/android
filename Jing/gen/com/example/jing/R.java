@@ -470,6 +470,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 </table>
          */
         public static final int navigationMode=0x7f010027;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int num=0x7f01006e;
         /**  Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -1305,11 +1313,11 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f05002c;
-        public static final int action_settings=0x7f050071;
+        public static final int action_settings=0x7f050073;
         public static final int activity_chooser_view_content=0x7f05002d;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int chatView=0x7f050061;
+        public static final int chatView=0x7f050062;
         public static final int checkbox=0x7f050035;
         public static final int collapseActionView=0x7f05000d;
         public static final int container=0x7f050046;
@@ -1336,23 +1344,24 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f05002e;
         public static final int expanded_menu=0x7f050034;
         public static final int file_icon=0x7f05005d;
-        public static final int file_list=0x7f050063;
+        public static final int file_list=0x7f050064;
         public static final int file_name=0x7f05005e;
-        public static final int head_arrowImageView=0x7f050068;
-        public static final int head_contentLayout=0x7f050066;
-        public static final int head_lastUpdatedTextView=0x7f05006a;
-        public static final int head_progressBar=0x7f050069;
-        public static final int head_tipsTextView=0x7f050067;
+        public static final int gridView=0x7f050060;
+        public static final int head_arrowImageView=0x7f05006a;
+        public static final int head_contentLayout=0x7f050068;
+        public static final int head_lastUpdatedTextView=0x7f05006c;
+        public static final int head_progressBar=0x7f05006b;
+        public static final int head_tipsTextView=0x7f050069;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f050032;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f05002f;
         public static final int item=0x7f05001f;
-        public static final int item_image=0x7f05006b;
-        public static final int item_text=0x7f05006c;
-        public static final int iv_icon=0x7f050064;
-        public static final int left_image=0x7f05006d;
+        public static final int item_image=0x7f05006d;
+        public static final int item_text=0x7f05006e;
+        public static final int iv_icon=0x7f050066;
+        public static final int left_image=0x7f05006f;
         public static final int listMode=0x7f050001;
         public static final int listView=0x7f05005f;
         public static final int list_item=0x7f050031;
@@ -1369,7 +1378,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f050037;
-        public static final int right_image=0x7f05006e;
+        public static final int right_image=0x7f050070;
         public static final int root=0x7f050049;
         public static final int search_badge=0x7f05003a;
         public static final int search_bar=0x7f050039;
@@ -1381,7 +1390,7 @@ containing a value of this type.
         public static final int search_plate=0x7f05003e;
         public static final int search_src_text=0x7f05003f;
         public static final int search_voice_btn=0x7f050043;
-        public static final int selectView=0x7f050060;
+        public static final int selectView=0x7f050061;
         public static final int shortcut=0x7f050036;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
@@ -1395,18 +1404,19 @@ containing a value of this type.
         public static final int tab4=0x7f05001d;
         public static final int tab5=0x7f05001e;
         public static final int tabMode=0x7f050002;
+        public static final int text=0x7f050065;
         public static final int title=0x7f050033;
         public static final int top_action_bar=0x7f050028;
         public static final int tv=0x7f05004e;
         public static final int tvInNew=0x7f05004d;
-        public static final int tv_name=0x7f050065;
-        public static final int tx1=0x7f05006f;
-        public static final int tx2=0x7f050070;
+        public static final int tv_name=0x7f050067;
+        public static final int tx1=0x7f050071;
+        public static final int tx2=0x7f050072;
         public static final int up=0x7f050029;
         public static final int useLogo=0x7f050003;
         public static final int vf_activity=0x7f05004c;
         public static final int view_holder=0x7f05004a;
-        public static final int viewpage=0x7f050062;
+        public static final int viewpage=0x7f050063;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1470,19 +1480,21 @@ containing a value of this type.
         public static final int file_list_item=0x7f030020;
         public static final int fragment_app=0x7f030021;
         public static final int fragment_board=0x7f030022;
-        public static final int fragment_nearby=0x7f030023;
-        public static final int fragment_setting=0x7f030024;
-        public static final int item_list_app=0x7f030025;
-        public static final int listview_foot=0x7f030026;
-        public static final int listview_head=0x7f030027;
-        public static final int navigationbar_item=0x7f030028;
-        public static final int sliding_left=0x7f030029;
-        public static final int sliding_main=0x7f03002a;
-        public static final int sliding_right=0x7f03002b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002c;
-        public static final int test=0x7f03002d;
-        public static final int test_weight=0x7f03002e;
-        public static final int text_item=0x7f03002f;
+        public static final int fragment_gridview=0x7f030023;
+        public static final int fragment_nearby=0x7f030024;
+        public static final int fragment_setting=0x7f030025;
+        public static final int grid_item=0x7f030026;
+        public static final int item_list_app=0x7f030027;
+        public static final int listview_foot=0x7f030028;
+        public static final int listview_head=0x7f030029;
+        public static final int navigationbar_item=0x7f03002a;
+        public static final int sliding_left=0x7f03002b;
+        public static final int sliding_main=0x7f03002c;
+        public static final int sliding_right=0x7f03002d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002e;
+        public static final int test=0x7f03002f;
+        public static final int test_weight=0x7f030030;
+        public static final int text_item=0x7f030031;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -3001,6 +3013,33 @@ containing a value of this type.
           @attr name android:windowAnimationStyle
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
+        /** Attributes that can be used with a MySelectView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #MySelectView_num com.example.jing:num}</code></td><td></td></tr>
+           </table>
+           @see #MySelectView_num
+         */
+        public static final int[] MySelectView = {
+            0x7f01006e
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.jing.R.attr#num}
+          attribute's value can be found in the {@link #MySelectView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.jing:num
+        */
+        public static final int MySelectView_num = 0;
         /** Attributes that can be used with a SearchView.
            <p>Includes the following attributes:</p>
            <table>

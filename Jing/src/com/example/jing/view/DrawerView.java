@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.example.jing.R;
 import com.example.jing.base.BaseActivity;
 import com.example.jing.fragment.AppListFragment;
-import com.example.jing.fragment.SettingFragment;
+import com.example.jing.fragment.GridViewFragment;
 import com.example.jing.ui.SlidingActivity;
 import com.example.jing.utils.ToastUtils;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -25,7 +25,7 @@ public class DrawerView implements OnClickListener {
 	private TextView message, setting;
 	
 	private AppListFragment mAppListFragment;
-	private SettingFragment mSettingFragment;
+	private GridViewFragment mGridViewFragment;
 
 	public DrawerView(Activity activity) {
 		this.activity = activity;
@@ -65,7 +65,7 @@ public class DrawerView implements OnClickListener {
 
 	private void initView() {
 		mAppListFragment = new AppListFragment();
-		mSettingFragment = new SettingFragment();
+		mGridViewFragment = new GridViewFragment();
 		
 		rightImage = (ImageView) localSlidingMenu
 				.findViewById(R.id.right_image);
@@ -89,9 +89,9 @@ public class DrawerView implements OnClickListener {
 			((SlidingActivity)activity).setSlidingTitle("app");
 			break;
 		case R.id.menu2:
-			((BaseActivity)activity).switchFragment(mSettingFragment, R.id.menu2);
+			((BaseActivity)activity).switchFragment(mGridViewFragment, R.id.menu2);
 			localSlidingMenu.showContent();
-			((SlidingActivity)activity).setSlidingTitle("…Ë÷√");
+			((SlidingActivity)activity).setSlidingTitle("gridview");
 			break;
 		}
 	}
